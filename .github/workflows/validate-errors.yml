@@ -1,0 +1,7 @@
+name: call-validate-errors
+run-name: ${{ github.actor }} - calling centralized error validate on manual dispatch
+on: workflow_dispatch
+jobs:
+  reusable-validate-errors:
+    uses: hpde/spase-workflows/.github/workflows/validate-errors.yml@master
+    secrets: inherit
